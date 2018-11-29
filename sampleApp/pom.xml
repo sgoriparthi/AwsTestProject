@@ -66,10 +66,16 @@
 		<dependency>
 		    <groupId>junit</groupId>
 		    <artifactId>junit</artifactId>
-		    <version>4.12</version>
+		    <version>4.12</version><!--$NO-MVN-MAN-VER$-->
 		    <scope>test</scope>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/br.com.ingenieux/elasticbeanstalk-javase-archetype -->
+		<dependency>
+		    <groupId>br.com.ingenieux</groupId>
+		    <artifactId>elasticbeanstalk-javase-archetype</artifactId>
+		    <version>1.5.0</version>
+		</dependency>
 		
 	</dependencies>
 	<build>
