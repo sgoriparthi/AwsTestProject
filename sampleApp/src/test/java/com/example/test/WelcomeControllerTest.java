@@ -3,18 +3,22 @@ package com.example.test;
 import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.WelcomeController;
+import com.example.service.UserService;
 
 public class WelcomeControllerTest {
 
 	private static WelcomeController welcomeController;
+
+	@Autowired  
+	private UserService userService;
 	//Map<String, Object> model = new HashMap<>();
 	//private String message = "Test Hello World";
 	
@@ -36,8 +40,8 @@ public class WelcomeControllerTest {
 	 
 	    @Test
 	    public void testSum() {
-	        String result = welcomeController.welcome(new HashMap<>());
-	        assertEquals("welcome", result);
+	        int result = welcomeController.sum(1,2);
+	        assertEquals(3, result);
 	    }
 
 }
